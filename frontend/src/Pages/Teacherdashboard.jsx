@@ -78,13 +78,11 @@ export const TeacherDash = ({ routes }) => {
         </div>
       </aside>
 
-      {/* Main Content / Outlet */}
+   
       <div className="p-4 sm:ml-64 mt-16 min-h-screen bg-black text-white">
         <div className="p-6 border-2 border-purple-800 border-dashed rounded-lg min-h-[80vh] shadow-neon-glow flex flex-col items-center justify-center space-y-4">
-          {/* Star / AI Icon */}
-          <AiFillStar size={60} className="text-yellow-400 animate-pulse" />
+         
           
-          {/* Outlet for nested routes */}
           <Outlet />
         </div>
       </div>
