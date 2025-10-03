@@ -1,15 +1,37 @@
 import mongoose from "mongoose";
 
+const { Schema, model } = mongoose;
+
+const optionSchema = new Schema(
+  {
+    text: { type: String, required: true }, // Option text
+  },
+  { _id: false }
+);
+
+const questionSchema = new Schema(
+  {
+    questionText: { type: String, required: true },
+    options: { type: [optionSchema], required: true },
+    correctAnswer: { type: String, required: true },
+    type: { 
+      type: String, 
+      enum: ["listening", "retention", "application", "grasping"], 
+      required: true 
+    }
+  },
+  { _id: false }
+);
+
 const examSchema = new Schema({
-  courseId: { type: Schema.Types.ObjectId, ref: "Course", required: true },
+  examId: { type: String, required: true, unique: true },
   title: { type: String, required: true },
-  description: String,
-  createdBy: { type: Schema.Types.ObjectId, ref: "User", required: true },
-  questions: [{ type: Schema.Types.ObjectId, ref: "Question" }],
-  createdAt: { type: Date, default: Date.now }
+  description: { type: String, default: "" },
+  questions: { type: [questionSchema], default: [] },
+  createdAt: { type: Date, default: Date.now },
+  isActive: { type: Boolean, default: true },
 });
 
-
-const Exam=mongoose.modal("Examinfo",examSchema);
+const Exam = model("Exam", examSchema);
 
 export default Exam;

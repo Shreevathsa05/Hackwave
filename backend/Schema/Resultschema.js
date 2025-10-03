@@ -1,5 +1,7 @@
 import mongoose from "mongoose";
 
+const { Schema } = mongoose;
+
 const resultSchema = new Schema({
   examId: { type: Schema.Types.ObjectId, ref: "Exam", required: true },
   studentId: { type: Schema.Types.ObjectId, ref: "User", required: true },
@@ -13,6 +15,7 @@ const resultSchema = new Schema({
   createdAt: { type: Date, default: Date.now }
 });
 
-const Result=mongoose.modal("Results",resultSchema);
+// Prevent OverwriteModelError
+const Result = mongoose.models.Result || mongoose.model("Result", resultSchema);
 
 export default Result;
