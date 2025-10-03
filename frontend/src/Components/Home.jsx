@@ -66,7 +66,7 @@ export const Home = () => {
               </button>
             </NavLink>
 
-            <NavLink to="/tecaherlogin" className="flex-1">
+            <NavLink to="/teacherlogin" className="flex-1">
               <button className="w-full px-6 py-4 bg-gradient-to-r from-green-500 to-teal-500 text-white font-semibold rounded-xl shadow-lg hover:scale-105 hover:shadow-2xl transition duration-300">
                 🎓 Teacher Login
               </button>
