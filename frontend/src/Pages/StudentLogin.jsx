@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FiEye, FiEyeOff } from "react-icons/fi";
+import { NavLink } from "react-router-dom";
 
 export const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -40,12 +41,14 @@ export const Login = () => {
             </div>
           </div>
 
-          <button
-            type="submit"
-            className="w-full py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold rounded-xl shadow-lg hover:scale-105 hover:shadow-2xl transition transform duration-300"
-          >
-            {isSignup ? "Sign Up" : "Sign In"}
-          </button>
+        <button
+  type="button" // not submit since we're just navigating
+  className="w-full py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold rounded-xl shadow-lg hover:scale-105 hover:shadow-2xl transition transform duration-300"
+>
+  <NavLink to="/studentdashboard" className="block w-full h-full text-center">
+     {isSignup ? "Sign Up" : "Sign In"}
+  </NavLink>
+</button>
         </form>
 
         <p className="text-gray-400 text-center mt-4">

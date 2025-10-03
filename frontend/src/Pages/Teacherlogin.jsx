@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FiEye, FiEyeOff } from "react-icons/fi";
+import { NavLink } from "react-router-dom";
 
 export const TeacherLogin = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -36,7 +37,9 @@ export const TeacherLogin = () => {
             type="submit"
             className="w-full py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold rounded-xl shadow-lg hover:scale-105 hover:shadow-2xl transition transform duration-300"
           >
-            Sign In
+           <NavLink to="/teacherdashboard" className="block w-full h-full text-center">
+     Sign In
+  </NavLink>
           </button>
         </form>
 
