@@ -9,7 +9,7 @@ import { Faq } from "./Components/Faq";
 import { Footer } from "./Components/Footer";
 
 // Pages
-import { Login } from ".Pages/StudentLogin";
+import { Login } from "./Pages/StudentLogin";
 import { TeacherLogin } from "./Pages/Teacherlogin";
 import { Studentdash } from "./Pages/Studentdashboard";
 import { TeacherDash } from "./Pages/Teacherdashboard";
