@@ -10,7 +10,6 @@ import { Footer } from "./Components/Footer";
 
 import { Studentdash } from "./Pages/Studentdashboard";
 import { TeacherDash } from "./Pages/Teacherdashboard";
-import  {CreateExam}  from "./Pages/Createexam";
 import { ShowAll } from "./Pages/Showallexam";
 
 
