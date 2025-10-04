@@ -1,23 +1,39 @@
 import React, { useEffect, useState } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
+
+// Components
 import { Header } from "./Components/Header";
 import { Home } from "./Components/Home";
 import { Feature } from "./Components/Features";
 import { Faq } from "./Components/Faq";
-import { Login } from "./Pages/StudentLogin";
-import { TeacherLogin } from "./Pages/Teacherlogin";
 import { Footer } from "./Components/Footer";
+<<<<<<< HEAD
 import { Studentdash } from "./Pages/Studentdashboard";
 import { TeacherDash } from "./Pages/Teacherdashboard";
 import { CreateExam } from "./Pages/Createexam";
 import { ShowAll } from "./Pages/Showallexam";
+=======
+
+// Pages
+import { Login } from "./Pages/StudentLogin";
+import { TeacherLogin } from "./pages/Teacherlogin";
+import { Studentdash } from "./pages/Studentdashboard";
+import { TeacherDash } from "./pages/Teacherdashboard";
+
+// AI Exam/Quiz Pages
+import CreateExam from "./pages/CreateExam";
+import Quiz from "./pages/Quiz";
+import Analysis from "./pages/Analysis";
+
+// Context
+import { ExamProvider } from "./components/ExamContext";
 
 export const App = () => {
   const [studentRoutes, setStudentRoutes] = useState([]);
   const [teacherRoutes, setTeacherRoutes] = useState([]);
 
   useEffect(() => {
-   
+    // ✅ Student dashboard routes
     const studentData = [
       { path: "dashboard", name: "Dashboard", element: <h1 className="text-white">Student Dashboard</h1> },
       { path: "courses", name: "Courses", element: <h2 className="text-white">Courses Page</h2> },
@@ -27,7 +43,7 @@ export const App = () => {
     ];
     setStudentRoutes(studentData);
 
-  
+    // ✅ Teacher dashboard routes
     const teacherData = [
       { path: "students", name: "Students", element: <h1 className="text-white">Students List</h1> },
       { path: "create-task", name: "Create Task", element: <CreateExam />},
@@ -38,43 +54,63 @@ export const App = () => {
   }, []);
 
   return (
-    <Routes>
-      {/* Home page */}
-      <Route
-        path="/"
-        element={
-          <>
-            <Header />
-            <Home />
-            <Feature />
-            <Faq />
-            <Footer />
-          </>
-        }
-      />
+    <ExamProvider>
+      <Routes>
+        {/* 🌍 Public Home Page */}
+        <Route
+          path="/"
+          element={
+            <>
+              <Header />
+              <Home />
+              <Feature />
+              <Faq />
+              <Footer />
+            </>
+          }
+        />
 
-      <Route path="/studnetsignup" element={<Login />} />
-      <Route path="/teacherlogin" element={<TeacherLogin />} />
+        {/* 🔑 Auth Pages */}
+        <Route path="/studentsignup" element={<Login />} />
+        <Route path="/teacherlogin" element={<TeacherLogin />} />
 
+        {/* 🎓 Student Dashboard Routes */}
+        <Route path="/studentdashboard" element={<Studentdash routes={studentRoutes} />}>
+          <Route index element={<Navigate to="dashboard" replace />} />
+          {studentRoutes.map((route) => (
+            <Route key={route.path} path={route.path} element={route.element} />
+          ))}
+        </Route>
 
-    
-      <Route path="/studentdashboard" element={<Studentdash routes={studentRoutes} />}>
-        <Route index element={<Navigate to="dashboard" replace />} />
-        {studentRoutes.map((route) => (
-          <Route key={route.path} path={route.path} element={route.element} />
-        ))}
-      </Route>
+        {/* 🧑‍🏫 Teacher Dashboard Routes */}
+        <Route path="/teacherdashboard" element={<TeacherDash routes={teacherRoutes} />}>
+          <Route index element={<Navigate to="students" replace />} />
+          {teacherRoutes.map((route) => (
+            <Route key={route.path} path={route.path} element={route.element} />
+          ))}
+        </Route>
 
-    
-      <Route path="/teacherdashboard" element={<TeacherDash routes={teacherRoutes} />}>
-        <Route index element={<Navigate to="students" replace />} />
-        {teacherRoutes.map((route) => (
-          <Route key={route.path} path={route.path} element={route.element} />
-        ))}
-      </Route>
-    </Routes>
+        {/* 🤖 AI Dynamic Quiz System */}
+        <Route path="/create/:examId" element={<CreateExam />} />
+        <Route path="/quiz/:examId" element={<Quiz />} />
+        <Route path="/analysis/:examId" element={<Analysis />} />
+
+        {/* 🚫 Fallback Route (404 Page) */}
+        <Route
+          path="*"
+          element={
+            <div className="h-screen flex flex-col items-center justify-center text-white bg-gray-900">
+              <h1 className="text-4xl font-bold mb-4">404 - Page Not Found</h1>
+              <p className="text-gray-400">The page you’re looking for doesn’t exist.</p>
+              <a href="/" className="mt-4 text-blue-400 underline">
+                Go Back Home
+              </a>
+            </div>
+          }
+        />
+      </Routes>
+    </ExamProvider>
   );
 };
 
 export default App;
-
