@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { useExam } from "../components/ExamContext";
+import { useExam } from "../Components/ExamContext";
 
 export default function CreateExam() {
     const backendurl=`https://hackwave-2025.onrender.com`
