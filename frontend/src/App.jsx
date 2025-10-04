@@ -8,8 +8,15 @@ import { Feature } from "./Components/Features";
 import { Faq } from "./Components/Faq";
 import { Footer } from "./Components/Footer";
 
+import { Studentdash } from "./Pages/Studentdashboard";
+import { TeacherDash } from "./Pages/Teacherdashboard";
+import  {CreateExam}  from "./Pages/Createexam";
+import { ShowAll } from "./Pages/Showallexam";
+
+
 // Pages
 import { Login } from "./Pages/StudentLogin";
+
 import { TeacherLogin } from "./Pages/Teacherlogin";
 import { Studentdash } from "./Pages/Studentdashboard";
 import { TeacherDash } from "./Pages/Teacherdashboard";
@@ -31,7 +38,7 @@ export const App = () => {
     const studentData = [
       { path: "dashboard", name: "Dashboard", element: <h1 className="text-white">Student Dashboard</h1> },
       { path: "courses", name: "Courses", element: <h2 className="text-white">Courses Page</h2> },
-      { path: "assignments", name: "Assignments", element: <h3 className="text-white">Assignments Page</h3> },
+      { path: "assignments", name: "Assignments", element: <Quiz /> },
       { path: "messages", name: "Messages", element: <h4 className="text-white">Messages Page</h4> },
       { path: "upcoming", name: "Upcoming", element: <h5 className="text-white">Upcoming Page</h5> },
     ];

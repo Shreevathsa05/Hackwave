@@ -1,6 +1,7 @@
 import { GoogleGenAI } from "@google/genai";
 import dotenv from "dotenv";
 import Result from "../Schema/Resultschema.js";
+import mongoose from 'mongoose'
 
 dotenv.config();
 
@@ -77,9 +78,10 @@ ${JSON.stringify(answers, null, 2)}`
     }
   });
 
-  const evaluation = response.candidates[0].content.parts[0].jsonValue;
+  const evaluation = JSON.parse(response.candidates[0].content.parts[0].text);
 
-  // Save into Results collection
+try {
+    // Save into Results collection
   const resultDoc = new Result({
     examId,
     studentId,
@@ -88,6 +90,10 @@ ${JSON.stringify(answers, null, 2)}`
   });
 
   await resultDoc.save();
+} catch (error) {
+  console.log(error)
+  return error;
+}
 
   return evaluation;
 }
