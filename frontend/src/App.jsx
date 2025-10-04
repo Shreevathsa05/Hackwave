@@ -40,8 +40,8 @@ export const App = () => {
     // ✅ Teacher dashboard routes
     const teacherData = [
       { path: "students", name: "Students", element: <h1 className="text-white">Students List</h1> },
-      { path: "create-task", name: "Create Task", element: <h2 className="text-white">Create Task Page</h2> },
-      { path: "assign-task", name: "Assign Task", element: <h3 className="text-white">Assign Task Page</h3> },
+      { path: "create-task", name: "Create Task", element: <CreateExam />},
+      { path: "assign-task", name: "Assigned Task", element:<ShowAll /> },
       { path: "messages", name: "Messages", element: <h4 className="text-white">Teacher Messages</h4> },
     ];
     setTeacherRoutes(teacherData);

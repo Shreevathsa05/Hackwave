@@ -36,6 +36,7 @@ ExamRoute.post("/", async (req, res) => {
 
     const newExam = new Exam({ examId, title, description, questions, isActive });
     await newExam.save();
+    console.log(newExam);
 
     res.status(201).json(newExam);
   } catch (error) {
@@ -49,6 +50,7 @@ Get all exams
 ExamRoute.get("/", async (req, res) => {
   try {
     const exams = await Exam.find();
+    console.log(exams);
     res.json(exams);
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -60,7 +62,9 @@ Get exam by examId
 */
 ExamRoute.get("/:examId", async (req, res) => {
   try {
+    console.log("Requested examId:", req.params.examId);
     const exam = await Exam.findOne({ examId: req.params.examId });
+  
     if (!exam) return res.status(404).json({ error: "Exam not found" });
     res.json(exam);
   } catch (error) {
