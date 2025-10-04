@@ -1,6 +1,6 @@
 import { GoogleGenAI } from "@google/genai";
 import dotenv from "dotenv";
-import Result from "../Schema/resultSchema.js";
+import Result from "../Schema/Resultschema.js";
 
 dotenv.config();
 
