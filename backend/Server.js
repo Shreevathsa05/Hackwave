@@ -24,7 +24,7 @@ app.use('/exam',ExamRoute)
 app.use('/results', ResultsRoute)
 app.use('/ai', AiRouter)
 
-
+import './ai-models/ResultAnalyzer.js'
 
 
 
