@@ -9,15 +9,15 @@ import { Faq } from "./Components/Faq";
 import { Footer } from "./Components/Footer";
 
 // Pages
-import { Login } from "./pages/StudentLogin";
-import { TeacherLogin } from "./pages/Teacherlogin";
-import { Studentdash } from "./pages/Studentdashboard";
-import { TeacherDash } from "./pages/Teacherdashboard";
+import { Login } from ".Pages/StudentLogin";
+import { TeacherLogin } from "./Pages/Teacherlogin";
+import { Studentdash } from "./Pages/Studentdashboard";
+import { TeacherDash } from "./Pages/Teacherdashboard";
 
 // AI Exam/Quiz Pages
-import CreateExam from "./pages/CreateExam";
-import Quiz from "./pages/Quiz";
-import Analysis from "./pages/Analysis";
+import CreateExam from "./Pages/CreateExam";
+import Quiz from "./Pages/Quiz";
+import Analysis from "./Pages/Analysis";
 
 // Context
 import { ExamProvider } from "./components/ExamContext";
