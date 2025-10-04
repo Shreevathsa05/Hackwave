@@ -29,7 +29,7 @@ export const Feature = () => {
     <section className="relative w-full py-16 px-6 bg-black text-white flex flex-col items-center">
       <div className="max-w-7xl w-full text-center mb-12">
         <h2 className="text-4xl md:text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
-          Why Choose EduNova?
+          Why Choose EduVeda?
         </h2>
         <p className="mt-4 text-gray-300 text-lg md:text-xl max-w-2xl mx-auto">
           Experience a next-generation learning platform built for students and teachers alike.

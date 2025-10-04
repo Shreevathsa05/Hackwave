@@ -16,7 +16,7 @@ export const Home = () => {
   ];
 
   return (
-    <main className="relative w-full h-auto bg-black flex items-center justify-center overflow-hidden text-white px-6 py-12">
+    <main className="relative  mt-20 w-full h-auto bg-black flex items-center justify-center overflow-hidden text-white px-6 py-12">
 
       {/* Lottie Background */}
       <div className="absolute inset-0 z-20">
@@ -61,7 +61,7 @@ export const Home = () => {
 
          
           <div className="flex flex-col sm:flex-row gap-4 pt-4 w-full">
-            <NavLink to="/studnetsignup" className="flex-1">
+            <NavLink to="/studentsignup" className="flex-1">
               <button className="w-full px-6 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold rounded-xl shadow-lg hover:scale-105 hover:shadow-2xl transition duration-300">
                 👨‍🎓 Student Login
               </button>

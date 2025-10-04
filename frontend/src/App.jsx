@@ -19,12 +19,14 @@ import { Login } from "./Pages/StudentLogin";
 import { TeacherLogin } from "./Pages/Teacherlogin";
 
 // AI Exam/Quiz Pages
-import CreateExam from "./Pages/CreateExam";
+import { CreateExam } from "./Pages/Createexam";
 import Quiz from "./Pages/Quiz";
 import Analysis from "./Pages/Analysis";
 
 // Context
 import { ExamProvider } from "./Components/ExamContext";
+import { UpcomingStudent } from "./Pages/UpcomingStudent";
+import { UpcomingTeacher } from "./Pages/UpcomingTeacher";
 
 export const App = () => {
   const [studentRoutes, setStudentRoutes] = useState([]);
@@ -33,20 +35,21 @@ export const App = () => {
   useEffect(() => {
     // ✅ Student dashboard routes
     const studentData = [
-      { path: "dashboard", name: "Dashboard", element: <h1 className="text-white">Student Dashboard</h1> },
-      { path: "courses", name: "Courses", element: <h2 className="text-white">Courses Page</h2> },
+     
+  
       { path: "assignments", name: "Assignments", element: <Quiz /> },
+       { path: "courses", name: "Courses", element: <h2 className="text-white">Courses Page</h2> },
       { path: "messages", name: "Messages", element: <h4 className="text-white">Messages Page</h4> },
-      { path: "upcoming", name: "Upcoming", element: <h5 className="text-white">Upcoming Page</h5> },
+      { path: "upcoming", name: "Upcoming-Feature", element: <UpcomingStudent /> },
     ];
     setStudentRoutes(studentData);
 
     // ✅ Teacher dashboard routes
     const teacherData = [
-      { path: "students", name: "Students", element: <h1 className="text-white">Students List</h1> },
+     
       { path: "create-task", name: "Create Task", element: <CreateExam />},
       { path: "assign-task", name: "Assigned Task", element:<ShowAll /> },
-      { path: "messages", name: "Messages", element: <h4 className="text-white">Teacher Messages</h4> },
+      { path: "messages", name: "Upcoming-feature", element: <UpcomingTeacher />},
     ];
     setTeacherRoutes(teacherData);
   }, []);
@@ -74,7 +77,7 @@ export const App = () => {
 
         {/* 🎓 Student Dashboard Routes */}
         <Route path="/studentdashboard" element={<Studentdash routes={studentRoutes} />}>
-          <Route index element={<Navigate to="dashboard" replace />} />
+          <Route index element={<Navigate to="assignments" replace />} />
           {studentRoutes.map((route) => (
             <Route key={route.path} path={route.path} element={route.element} />
           ))}
@@ -82,7 +85,7 @@ export const App = () => {
 
         {/* 🧑‍🏫 Teacher Dashboard Routes */}
         <Route path="/teacherdashboard" element={<TeacherDash routes={teacherRoutes} />}>
-          <Route index element={<Navigate to="students" replace />} />
+          <Route index element={<Navigate to="create-task" replace />} />
           {teacherRoutes.map((route) => (
             <Route key={route.path} path={route.path} element={route.element} />
           ))}

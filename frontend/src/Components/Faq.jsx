@@ -6,7 +6,7 @@ export const Faq = () => {
     {
       question: "What is EduNova?",
       answer:
-        "EduNova is a personalized learning platform that adapts to each student's pace and style.",
+        "EduVeda is a personalized learning platform that adapts to each student's pace and style.",
     },
     {
       question: "How does adaptive learning work?",
@@ -24,7 +24,7 @@ export const Faq = () => {
         "Students can participate in group projects and learn together seamlessly.",
     },
     {
-      question: "Is EduNova free to use?",
+      question: "Is EduVeda free to use?",
       answer:
         "EduNova offers both free and premium plans. Free plans cover basic adaptive learning, while premium plans unlock advanced analytics and collaboration tools.",
     },
@@ -34,7 +34,7 @@ export const Faq = () => {
         "Yes, parents can access a simplified dashboard to monitor their child’s learning progress and time spent on activities.",
     },
     {
-      question: "Does EduNova support multiple languages?",
+      question: "Does EduVeda support multiple languages?",
       answer:
         "Absolutely. The platform is designed to support multiple languages so learners from different regions can benefit.",
     },
@@ -49,7 +49,7 @@ export const Faq = () => {
         "We use industry-standard encryption and follow strict privacy policies to keep all student and teacher data safe.",
     },
     {
-      question: "Can EduNova integrate with existing school systems?",
+      question: "Can EduVeda integrate with existing school systems?",
       answer:
         "Yes, EduNova provides APIs and integration options for popular LMS platforms, making adoption seamless.",
     },
