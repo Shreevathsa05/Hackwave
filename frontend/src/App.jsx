@@ -16,15 +16,18 @@ import { ShowAll } from "./Pages/Showallexam";
 
 // Pages
 import { Login } from "./Pages/StudentLogin";
-import { TeacherLogin } from "./pages/Teacherlogin";
 
+import { TeacherLogin } from "./Pages/Teacherlogin";
+import { Studentdash } from "./Pages/Studentdashboard";
+import { TeacherDash } from "./Pages/Teacherdashboard";
 
-
-import Quiz from "./pages/Quiz";
-import Analysis from "./pages/Analysis";
+// AI Exam/Quiz Pages
+import CreateExam from "./Pages/CreateExam";
+import Quiz from "./Pages/Quiz";
+import Analysis from "./Pages/Analysis";
 
 // Context
-import { ExamProvider } from "./components/ExamContext";
+import { ExamProvider } from "./Components/ExamContext";
 
 export const App = () => {
   const [studentRoutes, setStudentRoutes] = useState([]);
