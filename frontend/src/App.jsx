@@ -20,7 +20,7 @@ import Quiz from "./Pages/Quiz";
 import Analysis from "./Pages/Analysis";
 
 // Context
-import { ExamProvider } from "./components/ExamContext";
+import { ExamProvider } from "./Components/ExamContext";
 
 export const App = () => {
   const [studentRoutes, setStudentRoutes] = useState([]);
