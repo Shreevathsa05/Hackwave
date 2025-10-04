@@ -17,8 +17,6 @@ import { ShowAll } from "./Pages/Showallexam";
 import { Login } from "./Pages/StudentLogin";
 
 import { TeacherLogin } from "./Pages/Teacherlogin";
-import { Studentdash } from "./Pages/Studentdashboard";
-import { TeacherDash } from "./Pages/Teacherdashboard";
 
 // AI Exam/Quiz Pages
 import CreateExam from "./Pages/CreateExam";
