@@ -12,6 +12,7 @@ export const Home = () => {
     "https://lottie.host/1934ab04-c203-4a59-8487-3cc1b1c58512/vDuPzw6HVg.lottie",
     "https://lottie.host/a6396d8a-d5f3-4486-92f4-e1c91c58ba05/pgx6ankgW5.lottie",
     "https://lottie.host/0f5fa06b-b8a7-4117-8452-accbfad07bfc/ZuWUy5b6CP.lottie",
+    
   ];
 
   return (
@@ -66,7 +67,7 @@ export const Home = () => {
               </button>
             </NavLink>
 
-            <NavLink to="/tecaherlogin" className="flex-1">
+            <NavLink to="/teacherlogin" className="flex-1">
               <button className="w-full px-6 py-4 bg-gradient-to-r from-green-500 to-teal-500 text-white font-semibold rounded-xl shadow-lg hover:scale-105 hover:shadow-2xl transition duration-300">
                 🎓 Teacher Login
               </button>
