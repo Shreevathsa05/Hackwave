@@ -95,10 +95,12 @@ Edu-Nova aims to **bridge the gap between learning and understanding** — creat
 
 🎥 **Watch Demo Video:**
 
-<video controls width="700">
+<video width="700" controls>
   <source src="https://res.cloudinary.com/dtlessn0g/video/upload/v1759639277/WhatsApp_Video_2025-10-04_at_19.38.04_7f55df54_fcwc9b.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
+
+If the video doesn’t play directly in GitHub, [**click here to watch it on Cloudinary →**](https://res.cloudinary.com/dtlessn0g/video/upload/v1759639277/WhatsApp_Video_2025-10-04_at_19.38.04_7f55df54_fcwc9b.mp4)
 
 ---
 
@@ -139,8 +141,6 @@ Edu-Nova’s model is **scalable**, **affordable**, and **teacher-friendly**, en
 Reimagining education for a smarter, AI-driven tomorrow.
 
 ---
-
-## 🧱 Project Structure
 
 
 
