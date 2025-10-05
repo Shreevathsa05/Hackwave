@@ -23,17 +23,17 @@ It empowers **students** to grow through continuous feedback and **teachers** to
 
 ## 🎯 Problem We’re Solving
 
-               | ⚠️ Challenge |                                       | 💡 Edu-Nova’s Smart Solution |
-|------------------------------------------------------|---------------------------------------------------------------|
-| Exams test **memory, not understanding**             | AI-curated questions and concept-level evaluations            |
-| **One-size-fits-all** assessments                    | Personalized learning paths based on student profiles         |
-| **Teacher overload** from manual grading & question setting | Automated question generation and AI-based evaluation  |
-| **No real feedback** after exams                     | Instant insights + learning gap analysis dashboards           |
-| **Poor doubt resolution**                            | AI-driven chatbot for 24/7 conceptual help                    |
-| **Static study material**                            | Dynamic, difficulty-adaptive revision modules                 |
-| **Disconnected ecosystem**                           | Unified portal for teachers, students & performance analytics |
-|
--------------------------------------------------------|---------------------------------------------------------------|
+| ⚠️ Challenge | 💡 Edu-Nova’s Smart Solution |
+|--------------|------------------------------|
+| Exams test **memory, not understanding** | AI-curated questions and concept-level evaluations |
+| **One-size-fits-all** assessments | Personalized learning paths based on student profiles |
+| **Teacher overload** from manual grading & question setting | Automated question generation and AI-based evaluation |
+| **No real feedback** after exams | Instant insights + learning gap analysis dashboards |
+| **Poor doubt resolution** | AI-driven chatbot for 24/7 conceptual help |
+| **Static study material** | Dynamic, difficulty-adaptive revision modules |
+| **Disconnected ecosystem** | Unified portal for teachers, students & performance analytics |
+
+---
 
 ## ⚙️ Tech Stack
 
@@ -126,17 +126,23 @@ Edu-Nova’s model is **scalable**, **affordable**, and **teacher-friendly**, en
 
 ## 🧑‍💻 Team Edu-Nova
 
-      | 👩‍💻 Name |         | 🧠 Role |
-|----------------------|-----------------------------|
-| **Shreevathsa Bhat** |  AI & Backend Engineer      |
-| **Shreekant Yadav**  | Frontend & System Architect |
+| 👩‍💻 Name | 🧠 Role |
+|-----------|---------|
+| **Shreevathsa Bhat** | AI & Backend Engineer |
+| **Shreekant Yadav** | Frontend & System Architect |
 
-
+---
 
 ## 🏆 Recognition
 
 ✨ Presented at **Tatva’s Hackwave 1.0**  
 Reimagining education for a smarter, AI-driven tomorrow.
+
+---
+
+## 🧱 Project Structure
+
+
 
 
 
